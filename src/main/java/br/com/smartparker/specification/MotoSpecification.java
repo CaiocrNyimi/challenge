@@ -43,5 +43,4 @@ public class MotoSpecification {
             return cb.and(arrayPredicates);
         };
     }
-
 }

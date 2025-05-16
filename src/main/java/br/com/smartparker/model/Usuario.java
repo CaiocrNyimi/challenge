@@ -1,7 +1,6 @@
 package br.com.smartparker.model;
 
-import org.hibernate.validator.constraints.br.CPF;
-
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -23,7 +22,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Usuario {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @NotBlank(message = "O nome não pode estar em branco.")
@@ -32,11 +31,12 @@ public class Usuario {
 
     @NotBlank(message = "O email não pode estar em branco.")
     @Email(message = "Formato de email inválido.")
+    @Column(unique = true)
     private String email;
 
     @NotBlank(message = "O CPF não pode estar em branco.")
-    @CPF(message = "CPF inválido.")
-    @Pattern(regexp = "^\\d{11}$", message = "O CPF precisa ter exatamente 11 digitos")
+    @Pattern(regexp = "^\\d{11}$", message = "O CPF precisa ter exatamente 11 números (sem caracteres especiais).")
+    @Column(unique = true)
     private String cpf;
 
     @OneToOne

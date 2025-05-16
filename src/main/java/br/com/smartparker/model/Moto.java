@@ -2,6 +2,7 @@ package br.com.smartparker.model;
 
 import org.hibernate.validator.constraints.Range;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -39,6 +40,7 @@ public class Moto {
 
     @NotBlank(message = "Campo obrigatório.")
     @Pattern(regexp = "^[A-Z]{3}[0-9][A-Z][0-9]{2}$", message = "Deve ser padrão de placa Mercosul.")
+    @Column(unique = true)
     private String placa;
 
     @NotBlank(message = "Campo obrigatório.")
@@ -46,5 +48,6 @@ public class Moto {
     private String status;
 
     @Pattern(regexp = "^[a-zA-Z0-9\\s]+$", message = "Não podem caracteres especiais.")
+    @Column(unique = true)
     private String qrCode;
 }

@@ -1,4 +1,4 @@
-package br.com.smartparker.smartparker_api;
+package br.com.smartparker;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -23,11 +23,10 @@ public class Patio {
     private Long id;
 
     @NotBlank(message = "Campo obrigatório.")
-    @Pattern(regexp = "^[a-zA-Z0-9\\s`]+$", message = "Não são permitidos caracteres especiais.")
+    @Size(max = 30, message = "Deve ter entre até 30 digitos.")
     private String nome;
 
     @NotBlank(message = "Campo obrigatório.")
     @Size(min = 5, max = 100, message = "Deve ter entre 5 e 100 digitos.")
-    @Pattern(regexp = "^[\\\\p{L}\\\\p{N}\\\\s.,\\\\-\\\\/ªºáéíóúàèìòùâêîôûãõçü'#&()°]+$", message = "O endereço contém caracteres não permitidos!")
     private String localizacao;
 }
