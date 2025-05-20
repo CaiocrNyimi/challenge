@@ -24,13 +24,13 @@ A **SmartParker API** é uma aplicação desenvolvida em Java com Spring Boot, p
 
 1. Clone o repositório:
 ------------------------------
-  git clone https://github.com/CaiocrNyimi/challenge.git
-  cd challenge-main
+    git clone https://github.com/CaiocrNyimi/challenge.git
+    cd challenge-main
 ------------------------------
 
 2. Execute a aplicação com Maven:
 ------------------------
-  mvnw.cmd spring-boot:run
+    mvnw.cmd spring-boot:run
 ------------------------
 
 3. Acesse a API em:
