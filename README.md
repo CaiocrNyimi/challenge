@@ -9,9 +9,10 @@ A **SmartParker API** é uma aplicação desenvolvida em Java com Spring Boot, p
 2tdspx:
 - Caio Cesar – rm556331
 - Guilherme Grizão – rm557958
+
 2tdspy:
 - Pietro – rm555839
----
+
 
 ## Instruções para Executar o Projeto:
 
